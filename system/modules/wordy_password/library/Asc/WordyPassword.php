@@ -39,7 +39,7 @@ class WordyPassword
 				$strPassword .= ucwords($arrWordyPassword[$index]);
 				if (!$midToggle && $intLoop >= (count($arrPasswordWords)/2)) {
 					$midToggle = true;
-					for ($x = 1; $x <= $intLoop; $x++) {
+					for ($x = 1; $x <= $intRandom; $x++) {
 						$strPassword .= mt_rand(0,9);
 					}
 				}
