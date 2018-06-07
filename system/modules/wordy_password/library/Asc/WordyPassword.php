@@ -36,11 +36,11 @@ class WordyPassword
 			$midToggle = false;
 			foreach ($arrPasswordWords as $index) {
 				$intLoop++;
-				$strPassword += ucwords($arrWordyPassword[$index]);
+				$strPassword .= ucwords($arrWordyPassword[$index]);
 				if (!$midToggle && $intLoop >= (count($arrPasswordWords)/2)) {
 					$midToggle = true;
 					for ($x = 1; $x <= $intLoop; $x++) {
-						$strPassword += mt_rand(0,9);
+						$strPassword .= mt_rand(0,9);
 					}
 				}
 			}
